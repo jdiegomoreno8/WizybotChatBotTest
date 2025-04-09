@@ -119,6 +119,20 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
+## Step-by-step guide for Postman:
+
+1. Choose the request type as POST and enter the API URL http://localhost:3002/chatbot/query.
+
+2. Go to the "Headers" tab and add Content-Type with the value application/json.
+
+3. Go to the "Body" tab, select "raw", and choose JSON from the dropdown.
+
+4. Paste the JSON payload in the body section.
+   - {
+  "query": "I am looking for a phone".
+}
+5. Click on "Send" to make the request.
+
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
