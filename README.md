@@ -21,16 +21,65 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Wizybot Chatbot API
 
+## Description
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+
+Wizybot is an AI-powered support and sales agent that uses Large Language Models (LLM) to generate responses to user queries. This API is built with **NestJS** and communicates with the OpenAI model to perform functions like product search and currency conversion.
+
+## Features
+- **Product Search**: The chatbot can search for products in a `ProductList.csv` file and return a list of relevant products.
+- **Currency Conversion**: The chatbot can convert prices from one currency to another using the Open Exchange Rates API.
+
+## Technologies Used
+- **NestJS**: Backend framework for Node.js.
+- **OpenAI API**: Used for generating chatbot responses with a language model.
+- **Open Exchange Rates API**: Used to get currency exchange rates.
+- **TypeScript**: Programming language for structure and typing.
+
+## Prerequisites
+
+1. **Node.js**: Required Node.js version 18 or above.
+2. **OpenAI API Key**: You need an OpenAI API key to interact with OpenAI's language model.
+3. **Open Exchange Rates API Key**: You need an API key to get the exchange rates.
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/your-username/wizybot-chatbot-api.git
+cd wizybot-chatbot-api
+
 
 ## Project setup
 
 ```bash
 $ npm install
+
+```
+##Install dependencies
+
+```bash
+npm install @nestjs/axios axios openai csv-parser
+npm install dotenv
+npm install openai
 ```
 
+## Set up Environment Variables
+.env file in the root of the project,  add the following environment variables:
+
+```.env
+Copiar
+OPENAI_API_KEY=openai-api-key
+EXCHANGE_API_KEY=exchange-api-key
+```
+## Change de model for OpenAI
+```openai.service.ts
+model: 'gpt-3.5-turbo',  // Change from 'gpt-4' to 'gpt-3.5-turbo'
+
+```
 ## Compile and run the project
 
 ```bash
@@ -70,29 +119,15 @@ $ mau deploy
 
 With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
 
-## Resources
-
-Check out a few resources that may come in handy when working with NestJS:
-
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
-
 ## Support
 
 Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Author - [Juan Diego Ospina Moreno](https://www.linkedin.com/in/jdiegomoreno8/)
+- Email - jdiegomoreno8@gmail.com
 
-## License
+This README should provide clear instructions for users who want to run or contribute to the project. Let me know if you'd like to adjust anything!
 
 Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
