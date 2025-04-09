@@ -70,8 +70,8 @@ npm install openai
 ## Set up Environment Variables
 .env file in the root of the project,  add the following environment variables:
 
+## Change de OpenAI API Key amd Exchange API Key
 ```.env
-Copiar
 OPENAI_API_KEY=openai-api-key
 EXCHANGE_API_KEY=exchange-api-key
 ```
